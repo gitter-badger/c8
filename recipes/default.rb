@@ -1,7 +1,7 @@
 # Encoding: utf-8
 #
-# Cookbook Name:: c8
-# Recipe:: default
+# Cookbook Name:: drupal
+# Recipe:: c8
 #
 # Copyright 2014, Jacob Dearing
 #
@@ -24,3 +24,10 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
+
+include_recipe 'platformstack::default'
+include_recipe 'rackops_rolebook::default'
+include_recipe 'rackops_rolebook::rack_user'
+
+include_recipe 'c8::app'
+include_recipe 'c8::db'
