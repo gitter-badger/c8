@@ -15,6 +15,7 @@ require 'chef/application'
 }
 
 def stub_resources
+  stub_command('which sudo').and_return('/usr/bin/sudo')
 end
 
 at_exit { ChefSpec::Coverage.report! }

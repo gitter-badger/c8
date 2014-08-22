@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'berkshelf', '> 3'
 gem 'chef', '>= 11.8'
+gem 'chef-sugar'
 gem 'rake', '>= 10.2'
 gem 'rubocop', '= 0.23'
 gem 'foodcritic', '>= 3.0'
