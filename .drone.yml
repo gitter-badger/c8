@@ -4,7 +4,7 @@ script:
   - rm ~/.ssh/id_rsa
   - ssh-keygen -q -f ~/.ssh/id_rsa -t rsa -N ''
   - time bundle install
-  - time bundle rake style spec
+  - time bundle exec rake style spec
 
 notify:
   email:
