@@ -1,8 +1,13 @@
-image: paulczar/meez
-env:
-  - CI=drone
-  - USE_SYSTEM_GECODE=1
+image: dearing/c8
+
 script:
-  - bundle install
-  - bundle exec berks install
-  - bundle exec rake style spec
+  - rm ~/.ssh/id_rsa
+  - ssh-keygen -q -f ~/.ssh/id_rsa -t rsa -N ''
+  - time bundle install
+  - time berks install
+  - time rake
+
+notify:
+  email:
+    recipients:
+      - {{email}}

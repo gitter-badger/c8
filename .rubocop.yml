@@ -8,3 +8,6 @@ UnusedBlockArgument:
 
 WordArray:
   MinSize: 5
+
+LineLength:
+  Enabled: false

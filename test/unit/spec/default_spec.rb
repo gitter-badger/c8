@@ -7,9 +7,8 @@ describe 'c8::default' do
   describe 'ubuntu' do
     let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
 
-    it 'writes some chefspec code' do
-      pending 'todo'
+    it 'should install phpstack' do
+      chef_run.should include_recipe 'phpstack::application_php'
     end
-
   end
 end
