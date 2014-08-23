@@ -1,4 +1,4 @@
-image: paulczar/meez
+image: dearing/c8
 env:
   - CI=drone
   - USE_SYSTEM_GECODE=1
