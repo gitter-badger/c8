@@ -1,5 +1,6 @@
 # Encoding: utf-8
 require 'rspec/expectations'
+require 'chef/sugar'
 require 'chefspec'
 require 'chefspec/berkshelf'
 require 'chef/application'
@@ -15,6 +16,8 @@ require 'chef/application'
 }
 
 def stub_resources
+  stub_command('which sudo').and_return('/usr/bin/sudo')
+  stub_command('/usr/sbin/apache2 -t').and_return('junk')
 end
 
 at_exit { ChefSpec::Coverage.report! }
