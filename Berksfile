@@ -10,4 +10,6 @@ cookbook 'cron', git: 'git@github.com:rackspace-cookbooks/cron.git'
 cookbook 'pg-multi', git: 'git@github.com:rackspace-cookbooks/pg-multi.git'
 cookbook 'phpstack', git: 'git@github.com:AutomationSupport/phpstack.git'
 
+cookbook 'chef-sugar'
+
 metadata

@@ -25,6 +25,8 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
+include_recipe 'chef-sugar::default'
+
 include_recipe 'platformstack::default'
 include_recipe 'rackops_rolebook::default'
 include_recipe 'rackops_rolebook::rack_user'

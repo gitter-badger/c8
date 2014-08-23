@@ -1,3 +1,5 @@
-node.default['apache']['sites']['example.com']['repository'] =
-    'https://github.com/mattjbarlow/drupal_skeleton'
-node.default['apache']['sites']['example.com']['revision'] = 'HEAD'
+site_name = 'icanhazdevops.dearing.link'
+namespace 'apache', 'sites', site_name do
+  repository 'https://github.com/mattjbarlow/drupal_skeleton'
+  revision 'HEAD'
+end
